@@ -13,3 +13,5 @@ quarto use template Amherst-Statistics/thesis
 ```
 
 Be sure to read the [thesis template intro](https://github.com/Amherst-Statistics/thesis/blob/main/_thesis-template-intro/thesis-template-intro.pdf) before you begin editing.
+
+For compiling to pdf: go to zsh terminal in RStudio & run `pdflatex index.tex` command.
