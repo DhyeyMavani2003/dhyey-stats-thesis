@@ -1,12 +1,15 @@
 # Abstract {.unnumbered} 
 
-The abstract should be a short, one-paragraph (~100--300 words) summary of your thesis work.
-
+Categorical data, particularly when involving ordinal responses, plays a crucial role in fields such as social sciences and finance, where capturing the inherent ordering of variables can lead to more meaningful inferences of the underlying distributions. A key challenge in analyzing such data lies in exploring the regression dependence structures among variables. While many model-based approaches have been developed to examine these structures, there remains a scarcity of model-free methods. Wei & Kim (2021) addressed this gap by introducing SCCRAM, a novel model-free measure based on the checkerboard copula, capable of identifying and quantifying regression dependence in multivariate categorical data with ordinal and nominal variables. This work builds on their contribution by developing scalable R and Python packages for SCCRAM, employing parallel computing to enhance accessibility and efficiency in large-scale data analysis. Initial simulations demonstrate the effectiveness of these implementations, offering researchers a robust tool for exploratory modeling and further exploration of regression dependence structures in categorical datasets for this use-case.
 
 
 # Acknowledgements {.unnumbered} 
 
-Use this space to acknowledge and thank those who have helped you in the thesis process (professors, staff, friends, family, etc.). If you had special funding to conduct your thesis work, that should be acknowledged here as well. 
+I would like to thank everyone who made my experience nothing short of amazing during my thesis journey. Firstly, I'd like to convey my gratitude to Professor Shu-Min Liao for advising me through this journey, and for believing in me to take on statistical software component of her most recent research work along with her collaborators. From my first research experience on campus building R-Blocks, she played a pivotal role in my journey.
+
+I am also incredibly grateful to my college advisor, and statistics major advisor, Professor Nicholas Horton for always advocating for me and for supporting me throughout the Amherst College experience. I would also like to thank Professor Jun Ishii for teaching me Advanced Econometrics, which helped me gain a really clear understanding on the foundational tools on which I was able to build on in my work.
+
+Finally, I would like to thank my friends and family for their constant belief in my abilities. Special thanks to my mom, dad, sister, grandfather, and grandmother for lending me and making me capable for this opportunity to study abroad. Last, but not the least, I would like to thank my friends, peers, and colleagues on campus, who took courses, worked, and played sports with me. This journey of academic, personal, and professional growth wouldn't be possible without their support.   
 
 
 

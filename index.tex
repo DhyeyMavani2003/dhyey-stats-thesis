@@ -215,7 +215,7 @@
 \@ifundefined{codebgcolor}{\definecolor{codebgcolor}{HTML}{f8f8f8}}{}
 \makeatother
 \makeatletter
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, colback={codebgcolor}, breakable, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, colback={codebgcolor}, frame hidden, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
 \makeatother
 
 \ifLuaTeX
@@ -226,8 +226,8 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
 \hypersetup{
-  pdftitle={Informative thesis title},
-  pdfauthor={Your Name},
+  pdftitle={Parallel Computation Framework for Discrete Copula Modeling},
+  pdfauthor={Dhyey Mavani},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -251,8 +251,9 @@
 {\thispagestyle{empty}%
   \null\vskip 1in
   \begin{center}\fontsize{24}{28}\sf
-     \textbf{Informative thesis title}\\[2cm]
-     \fontsize{18}{20}\sf Your Name\\[0.2cm]
+     \textbf{Parallel Computation Framework for Discrete Copula
+Modeling}\\[2cm]
+     \fontsize{18}{20}\sf Dhyey Mavani\\[0.2cm]
      
      \vfill
      
@@ -264,9 +265,9 @@ Statistics\\
      for the degree of Bachelor of Arts with honors.\\
      \vskip 0.5in
      Advisor(s):\\
-     \fontsize{13}{15}\sf List advisor names here
+     \fontsize{13}{15}\sf Professor Shu-Min Liao
     \vskip 0.5in
-    October 13, 2024
+    October 15, 2024
   \end{center}
   \newpage\mbox{}\thispagestyle{empty}\newpage
 }
@@ -274,7 +275,7 @@ Statistics\\
 
 % Title and date
 
-\title{Informative thesis title}
+\title{Parallel Computation Framework for Discrete Copula Modeling}
 
 \begin{document}
 \maketitle
@@ -294,8 +295,24 @@ Statistics\\
 
 \markboth{Abstract}{Abstract}
 
-The abstract should be a short, one-paragraph (\textasciitilde100--300
-words) summary of your thesis work.
+Categorical data, particularly when involving ordinal responses, plays a
+crucial role in fields such as social sciences and finance, where
+capturing the inherent ordering of variables can lead to more meaningful
+inferences of the underlying distributions. A key challenge in analyzing
+such data lies in exploring the regression dependence structures among
+variables. While many model-based approaches have been developed to
+examine these structures, there remains a scarcity of model-free
+methods. Wei \& Kim (2021) addressed this gap by introducing SCCRAM, a
+novel model-free measure based on the checkerboard copula, capable of
+identifying and quantifying regression dependence in multivariate
+categorical data with ordinal and nominal variables. This work builds on
+their contribution by developing scalable R and Python packages for
+SCCRAM, employing parallel computing to enhance accessibility and
+efficiency in large-scale data analysis. Initial simulations demonstrate
+the effectiveness of these implementations, offering researchers a
+robust tool for exploratory modeling and further exploration of
+regression dependence structures in categorical datasets for this
+use-case.
 
 \bookmarksetup{startatroot}
 
@@ -304,10 +321,28 @@ words) summary of your thesis work.
 
 \markboth{Acknowledgements}{Acknowledgements}
 
-Use this space to acknowledge and thank those who have helped you in the
-thesis process (professors, staff, friends, family, etc.). If you had
-special funding to conduct your thesis work, that should be acknowledged
-here as well.
+I would like to thank everyone who made my experience nothing short of
+amazing during my thesis journey. Firstly, I'd like to convey my
+gratitude to Professor Shu-Min Liao for advising me through this
+journey, and for believing in me to take on statistical software
+component of her most recent research work along with her collaborators.
+From my first research experience on campus building R-Blocks, she
+played a pivotal role in my journey.
+
+I am also incredibly grateful to my college advisor, and statistics
+major advisor, Professor Nicholas Horton for always advocating for me
+and for supporting me throughout the Amherst College experience. I would
+also like to thank Professor Jun Ishii for teaching me Advanced
+Econometrics, which helped me gain a really clear understanding on the
+foundational tools on which I was able to build on in my work.
+
+Finally, I would like to thank my friends and family for their constant
+belief in my abilities. Special thanks to my mom, dad, sister,
+grandfather, and grandmother for lending me and making me capable for
+this opportunity to study abroad. Last, but not the least, I would like
+to thank my friends, peers, and colleagues on campus, who took courses,
+worked, and played sports with me. This journey of academic, personal,
+and professional growth wouldn't be possible without their support.
 
 \cleardoublepage\pagenumbering{arabic}\setcounter{page}{1}
 
@@ -394,7 +429,7 @@ directory?}\label{whats-in-this-project-directory}
   \texttt{src} folder: recommended folder for storing any code scripts.
 \end{itemize}
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
 Items in the \texttt{data}, \texttt{fig}, and \texttt{src} folders
 starting with \texttt{temp} are used as examples within this template
@@ -494,7 +529,7 @@ but can be deleted when you begin your own edits.
   \includegraphics[width=0.5\textwidth,height=\textheight]{fig/temp_preview-viewer-pane.png}
   \end{center}
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
   Rendering any \texttt{.qmd} file will render the \emph{entire} project
   (all files listed under \texttt{chapters} in the
@@ -545,7 +580,7 @@ but can be deleted when you begin your own edits.
     correctly. Errors are usually due to indentation or line spacing
     before headings or lists.
 
-    \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+    \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
     To format additional content within a list item at the same depth,
     the first text of the new content must align with the first text of
@@ -568,7 +603,7 @@ Even if you are familiar with markdown, some behavior and syntax in
 Quarto markdown is slightly different (and often better) than R
 markdown.
 
-\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-caution-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, arc=.35mm, toptitle=1mm]
+\begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-caution-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-caution-color-frame]
 
 The code within each \texttt{.qmd} file is self-contained and rendered
 independently before merging the document to build the thesis, so
@@ -588,7 +623,7 @@ at the start of each chapter file.
   \href{https://quarto.org/docs/authoring/figures.html}{including
   external figures}.
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
   Many options will work for both PDF and HTML formats, but your thesis
   must be submitted as a PDF. Pay attention to which elements work for
@@ -606,7 +641,7 @@ at the start of each chapter file.
   \texttt{warning} and \texttt{message} to \texttt{false} (specified in
   \texttt{\_extensions/amherst-thesis/\_extension.yml}).
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
   Quarto also supports other languages such as python (see the list
   under the Computations section of the side menu at the linked page),
@@ -616,7 +651,7 @@ at the start of each chapter file.
 
   \newpage{}
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-caution-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-caution-color-frame, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-caution-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-caution-color}{\faFire}\hspace{0.5em}{Caution}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-caution-color-frame]
 
   To ensure all of your displayed code fits within the printed code
   blocks without bleeding into the margins, set up RStudio to show the
@@ -659,7 +694,7 @@ at the start of each chapter file.
 
   To reiterate their cautions here\ldots{}
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-warning-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-warning-color-frame, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Reserved prefixes for cross-referencing}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-warning-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-warning-color}{\faExclamationTriangle}\hspace{0.5em}{Reserved prefixes for cross-referencing}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-warning-color-frame]
 
   Unless you are creating a cross-reference, avoid using the reserved
   cross-reference prefixes for code cell labels (e.g.~set using the
@@ -695,7 +730,7 @@ at the start of each chapter file.
   \href{https://www.cmor-faculty.rice.edu/~heinken/latex/symbols.pdf}{LaTeX
   mathematical symbols} for your reference.
 
-  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, titlerule=0mm, rightrule=.15mm, toprule=.15mm, opacityback=0, colbacktitle=quarto-callout-note-color!10!white, breakable, colback=white, left=2mm, opacitybacktitle=0.6, bottomtitle=1mm, bottomrule=.15mm, colframe=quarto-callout-note-color-frame, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, arc=.35mm, toptitle=1mm]
+  \begin{tcolorbox}[enhanced jigsaw, coltitle=black, leftrule=.75mm, rightrule=.15mm, breakable, titlerule=0mm, bottomrule=.15mm, left=2mm, colbacktitle=quarto-callout-note-color!10!white, arc=.35mm, toprule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{Note}, toptitle=1mm, colback=white, bottomtitle=1mm, opacitybacktitle=0.6, opacityback=0, colframe=quarto-callout-note-color-frame]
 
   Letters in math mode are individual variables. If you want to write
   text in math modes such as distribution names, words, etc, then you
